@@ -1,6 +1,7 @@
 // Step 1:
 // Write a createGroceries function that returns an array with 6 groceries items
 function createGroceries() {
+  return [`apple`, `juice`, `bnana`, `shampo`, `brush`, `olive`];
   // write your code here...
 }
 
@@ -8,23 +9,27 @@ function createGroceries() {
 // Write a getSecondGroceryItem function that returns the second grocery item from `groceries` argument
 function getSecondGroceryItem(groceries) {
   // write your code here...
+
+  return groceries[1];
 }
 
 // Step 3:
 // Write a getGroceriesCount that returns the length of the `groceries` argument
 function getGroceriesCount(groceries) {
+  return groceries.length;
   // write your code here...
 }
 
 // Step 4:
 // Write a getLastGroceryItem function that returns the last grocery item from `groceries` argument
 function getLastGroceryItem(groceries) {
-  // write your code here...
+  return groceries[groceries.length - 1];
 }
 
 // Step 5:
 // Write a removeLastGroceryItem function that removes the last grocery item and return it
 function removeLastGroceryItem(groceries) {
+  return groceries.pop();
   // write your code here...
 }
 
@@ -33,12 +38,17 @@ function removeLastGroceryItem(groceries) {
 // and returns the modified array
 function addNewGroceries(groceries, itemOne, itemTwo) {
   // write your code here...
+  groceries.push(itemOne);
+  groceries.push(itemTwo);
+  return groceries;
 }
 
 // Step 7:
 // Write a getFirstThreeGroceryItems function that returns a new array that contains the first three grocery items
 function getFirstThreeGroceryItems(groceries) {
   // write your code here...
+
+  return groceries.slice(0, 3);
 }
 
 // 🌶️🌶️🌶️ **Challenge**
@@ -47,6 +57,9 @@ function getFirstThreeGroceryItems(groceries) {
 // Write a deleteThirdItem function that deletes the third item from the groceries argument
 // and returns the modified groceries list
 function deleteThirdItem(groceries) {
+  groceries.splice(2, 1);
+
+  return groceries;
   // write your code here...
 }
 
@@ -77,6 +90,6 @@ module.exports = {
   addNewGroceries,
   getFirstThreeGroceryItems,
   deleteThirdItem,
-  insertItemAtBeginning,
-  replaceFirstTwoItems,
+  // insertItemAtBeginning,
+  // replaceFirstTwoItems,
 };
